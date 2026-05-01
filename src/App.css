@@ -1,0 +1,31 @@
+.main-title-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.main-title-box h1 {
+    font-size: 52px;
+    line-height: 50px;
+    color: #fff;
+    text-shadow: 0 8px 4px rgba(44, 44, 44, 0.339);
+}
+
+.main-title-box img {
+    width: 64px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+@media (max-width: 600px) {
+    .main-title-box {
+        flex-direction: column-reverse;
+    }
+}
