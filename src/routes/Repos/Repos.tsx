@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom"
-import type { RepoProps } from "../types/repo";
-import Loading from "../components/Loading/Loading";
+import type { RepoProps } from "../../types/repo";
+import Loading from "../../components/Loading/Loading";
+import Repo from "../../components/Repo/Repo";
+import styles from "./Repos.module.css"
 
 function Repos() {
 
@@ -46,7 +48,8 @@ function Repos() {
 
     }
 
-    //  vai executar no inicio do componente e quando username mudar
+    //  vai executar no inicio do componente e quando username mudar, e por padrão no modo dev o useeffect é executado
+    // duas vezes
     useEffect(() => {
         if (username) {
             loadRepos(username);
@@ -55,24 +58,18 @@ function Repos() {
 
 
     return (
-        <div>
-            <Link to="/">Voltar</Link>
-            <h1>
+        <div style={{ overflow: "hidden" }}>
+            <Link className="link" to="/">Voltar</Link>
+            <h2 className={styles.repoTitle}>
                 Repos de {username}
-            </h1>
+            </h2>
 
             {isLoading && <Loading />}
 
             {repos.length > 0 ? (
-                <ul>
-                    {repos.map((repo) => (
-                        <li key={`repo-${repo.html_url}`}>
-                            <strong>{repo.name} - {repo.created_at}</strong>
-                            <p>{repo.description}</p>
-                            <a href={repo.html_url} target="_blank">Ir para repositório</a>
-                        </li>
-                    ))}
-                </ul>
+                <div>
+                    {repos.map((repo) => <Repo key={`repo-${repo.html_url}`} {...repo} />)}
+                </div>
             ) : (
                 !isLoading && <p>Nenhum Repositório encontrado.</p>
             )}

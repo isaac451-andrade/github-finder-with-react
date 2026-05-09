@@ -2,9 +2,9 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.tsx'
-import Home from './routes/Home.tsx'
+import Home from './routes/Home/Home.tsx'
 import { createBrowserRouter, RouterProvider } from "react-router-dom"
-import Repos from './routes/Repos.tsx'
+import Repos from './routes/Repos/Repos.tsx'
 
 
 const router = createBrowserRouter([

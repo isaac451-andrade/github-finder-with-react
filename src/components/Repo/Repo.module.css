@@ -1,0 +1,33 @@
+.repoContainer {
+    background: var(--bg-secondary);
+    border-radius: var(--bd-radius);
+    padding: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.repoItem {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    align-items: center;
+}
+
+.repoItem h3 {
+    color: var(--c-minor-title);
+    font-weight: bold;
+    font-size: 24px;
+    vertical-align: center;
+}
+
+.repoItem h3 span {
+    color: var(--c-fade);
+}
+
+.repoItem p {
+    color: var(--c-fade);
+    text-align: justify;
+    margin-block: 6px;
+}

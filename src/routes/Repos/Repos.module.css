@@ -1,0 +1,5 @@
+.repoTitle {
+    font-size: 32px;
+    margin-block: 1rem;
+    border-bottom: 2px solid var(--bg-secondary);
+}

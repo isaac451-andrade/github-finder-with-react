@@ -36,7 +36,7 @@ function UserProfile({
                     <p className={styles.number}>{following}</p>
                 </div>
             </div>
-            <Link className={styles.link} to={`repos/${login}`}>Ver melhores projetos</Link>
+            <Link className="link" to={`repos/${login}`}>Ver projetos</Link>
 
         </div>
     )

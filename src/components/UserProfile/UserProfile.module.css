@@ -52,18 +52,3 @@
     padding: .2rem .4rem;
     border-radius: 3px;
 }
-
-.userContainer a {
-    text-align: center;
-    background-color: #644aff;
-    padding: 1rem;
-    border-radius: 5px;
-    opacity: .8;
-    transition: .3s;
-    text-decoration: none;
-    color: #fff;
-}
-
-.userContainer a:hover {
-    opacity: 1;
-}

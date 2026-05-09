@@ -1,9 +1,9 @@
-import type { UserProps } from "../types/user";
+import type { UserProps } from "../../types/user";
 import { useState } from "react"
-import Search from "../components/Search/Search"
-import UserProfile from "../components/UserProfile/UserProfile";
-import Error from "../components/Error/Error";
-import Loading from "../components/Loading/Loading";
+import Search from "../../components/Search/Search"
+import UserProfile from "../../components/UserProfile/UserProfile";
+import Error from "../../components/Error/Error";
+import Loading from "../../components/Loading/Loading";
 
 export default function Home() {
 
